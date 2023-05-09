@@ -13,7 +13,7 @@ const app = express();
 // add in when the app is ready to be deployed
 // app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(logger("dev"));
-app.use(express.json());
+app.use(express.json()); // <-- parses json http requests, to make them available on req.body
 
 
 // Configure the auth middleware
@@ -24,13 +24,14 @@ app.use(require("./config/auth"));
 app.use("/api/users", require("./routes/api/users"));
 
 // "catch all" route
+// single page application -- SPA
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
-const port = process.env.PORT || 3001;
-
+// const port = process.env.PORT || 3001;
+// ^ not necessary
 
 
 

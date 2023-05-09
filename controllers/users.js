@@ -12,6 +12,8 @@ async function signup(req, res) {
   try {
     await user.save();
     const token = createJWT(user);
+    // the code that runs in responce to this on the client 
+    // is in the utils/userService signup function, the last .then
     res.json({ token });
   } catch (err) {
     // Probably a duplicate email

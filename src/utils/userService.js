@@ -15,6 +15,9 @@ function signup(user) {
     throw new Error('Email already taken!');
   })
   // Parameter destructuring!
+  // setting the token in localstorage!
+  // This is when we recieve the token from the server on the client
+  // and store it in localstorage
   .then(({token}) => tokenService.setToken(token));
   // The above could have been written as
   //.then((token) => token.token);
