@@ -11,8 +11,8 @@ const S3 = require('aws-sdk/clients/s3');
 // initialize the constructor function
 const s3 = new S3();
 
-// use uuid to generate random names for our aws file
-const { v4: uuidv4 } = require('uuid');
+// we'll use the module uuid to generate random names for our aws file
+const { v4: uuidv4 } = require('uuid')
 
 // our s3 aws bucket from our .env file!
 const BUCKET_NAME = process.env.BUCKET
@@ -21,13 +21,12 @@ async function signup(req, res) {
   console.log(req.body, '< req.body', req.file, '<req.file')
 
   // first check to make sure the user uploaded a file
-  if(!req.file) return res.status(400).json({error: "Please Submit a Photo!"})
+  if(!req.file) return res.status(400).json({error: "Please Submit a Photo!"});
 
-  // create path of where we want to store file in our s3 bucket
+  // create our path of where we want to strore file in our s3 bucket
   const filePath = `project4/${uuidv4()}-${req.file.originalname}`;
-  const params = {Bucket: BUCKET_NAME, Key: filePath, Body: req.file.buffer};
-  // req.file.buffer is the image uploaded from the client ^
-  // use sd.upload to make a request to s3 bucket
+  const params = {Bucket: BUCKET_NAME, Key: filePath, Body: req.file.buffer}; // req.file.buffer is the image uploaded from the client
+  // sd.upload to make a request to s3 bucket
   s3.upload(params, async function(err, data){
     if(err){
       console.log('===========================================')
@@ -36,21 +35,16 @@ async function signup(req, res) {
       res.status(400).json({error: 'Error from aws, check your terminal!'})
     }
 
-    const user = new User({...req.body, photoUrl: data.Location}); 
-    // data.Location is the is the url of our image on AWS
+    const user = new User({...req.body, photoUrl: data.Location}); // data.Location is the is the url of our image on AWS
     try {
-      await user.save();
-      // user model .pre('save') will run which hashes our password
+      await user.save(); // user model .pre('save') will run which hashes our password
       // create our jwt token
       const token = createJWT(user);
-      // the code that runs in responce to this on the client 
-      // is in the utils/userService signup function, the last .then
-      res.json({ token });
-      // sends the token to the client (userService.signup function) which stores to the token in localstorage!
+      res.json({token}); // sends the token to the client (userService.signup function) which stores to the token in localstorage!
       // our user model toJSON removes the password
-    } catch (err) {
-      // Probably a duplicate email
-      res.status(400).json(err);
+
+    } catch(err){
+      res.status(400).json({error: err})
     }
 
   }) // end of s3.upload
