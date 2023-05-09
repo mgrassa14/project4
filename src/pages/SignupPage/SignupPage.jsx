@@ -71,7 +71,7 @@ export default function Signup({handleSignUpOrLogin}){
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' floated='right'>
             <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as="h2" color="blue" textAlign="center">
+            <Header as="h2" color="`    `" textAlign="center">
                 <Image src='https://i.imgur.com/TM4eA5g.jpglogo.png' /> Sign Up!
             </Header>
             <Form autoComplete="off" onSubmit={handleSubmit}>
