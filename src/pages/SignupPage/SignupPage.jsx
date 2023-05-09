@@ -1,6 +1,8 @@
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 
 import { useState } from 'react'
+import userService from '../../utils/userService';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 // import "./SignupPage.css"
 
 export default function Signup(){
@@ -30,6 +32,7 @@ export default function Signup(){
 
       async function handleSubmit(e){
         e.preventDefault();
+        // =================
         // We have to turn our data into formdata, otherwise it would be JSON
         const formData = new FormData(); 
         // ^ this is from the browser, allows us to create key value pairs
@@ -41,15 +44,16 @@ export default function Signup(){
         }
         // if you want to view the formData in the console you have to loop over it, otherwise it will look empty!
         console.log(formData.forEach((item) => console.log(item)));
-    
+        // =================
+
         try {
     
             await userService.signup(formData); 
             //this makes the http request to the our express server /api/users/signup
             // when it finishes it stores the jwt toke in localstorage,
             // we can switch the view (go to the feed page or something!)
-        handleSignUpOrLogin(); // this updates the state in the app with the correct token from localstorage!
-        navigate('/'); // this programmatically navigates the client to the home page (refere to app.js for the '/')
+        // handleSignUpOrLogin(); // this updates the state in the app with the correct token from localstorage!
+        // navigate('/'); // this programmatically navigates the client to the home page (refere to app.js for the '/')
     
         } catch(err){
             console.log(err.message, ' this is the error singnup up')

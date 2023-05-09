@@ -8,17 +8,19 @@ module.exports = {
 };
 
 async function signup(req, res) {
-  const user = new User(req.body);
-  try {
-    await user.save();
-    const token = createJWT(user);
-    // the code that runs in responce to this on the client 
-    // is in the utils/userService signup function, the last .then
-    res.json({ token });
-  } catch (err) {
-    // Probably a duplicate email
-    res.status(400).json(err);
-  }
+  console.log(req.body, '< req.body', req.file, '<req.file')
+  res.json({data: 'hiting signup!'})
+  // const user = new User(req.body);
+  // try {
+  //   await user.save();
+  //   const token = createJWT(user);
+  //   // the code that runs in responce to this on the client 
+  //   // is in the utils/userService signup function, the last .then
+  //   res.json({ token });
+  // } catch (err) {
+  //   // Probably a duplicate email
+  //   res.status(400).json(err);
+  // }
 }
 
 async function login(req, res) {
