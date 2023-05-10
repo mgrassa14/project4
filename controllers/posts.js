@@ -8,7 +8,8 @@ module.exports = {
 }
 
 function create(req, res){
-   res.json({data: 'working'})
+    console.log(req.body, req.file)
+    res.json({data: 'working'})
 }
 
 async function index(req, res){
