@@ -10,7 +10,7 @@ const upload = multer();
 // signup page in the react model!
 router.post("/signup", upload.single('photo'), usersCtrl.signup);
 router.post("/login", usersCtrl.login);
-
+router.get('/:username', usersCtrl.profile);
 /*---------- Protected Routes ----------*/
 
 module.exports = router;

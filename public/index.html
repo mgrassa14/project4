@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- browser title -->
     <title>Vite App</title>
+    <!-- semantic ui css link -->
+    <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css" />
   </head>
   <body>
     <!-- where our react app will be injected -->
@@ -19,9 +21,7 @@
       window.$RefreshSig$ = () => (type) => type
       window.__vite_plugin_react_preamble_installed__ = true
     </script>
-   <script type="module" src="http://localhost:5173/@vite/client"></script>
-   <script type="module" src="http://localhost:5173/src/main.jsx"></script>
-
-   
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/src/main.jsx"></script>
   </body>
 </html>
