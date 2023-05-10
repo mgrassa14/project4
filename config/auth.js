@@ -14,6 +14,7 @@ module.exports = function (req, res, next) {
       } else {
         // It's a valid token, so add user to req
         req.user = decoded.user;
+        // this makes req.user available in every controller function!
         next();
       }
     });

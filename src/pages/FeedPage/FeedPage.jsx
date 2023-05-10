@@ -6,10 +6,13 @@ import PostDisplay from '../../components/PostDisplay/PostDisplay';
 import { Grid } from 'semantic-ui-react';
 import { useState } from 'react';
 
-// this will import all the funcitonm from postApi, and attach to an object call postApi
-import * as postApi from '../../utils/postApi'
 
-export default function FeedPage(props){  
+
+
+export default function FeedPage({ posts }){  
+
+
+
     return (
         <Grid centered>
         <Grid.Row>

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
@@ -29,7 +29,7 @@ function App() {
     // decodes it to an object, that we can we store in our state!
     setUser(userService.getUser())
   }
-
+  // (C)RUD
   async function handleAddPost(post) {
     try {
       const responseData = await postsApi.create(post); // this is calling our create function in the postsApi utils folder
@@ -41,9 +41,28 @@ function App() {
     }
   }
 
+  // C(R)UD
+  async function getPosts() {
+    try {
+      const response = await postsApi.getAll();
+      console.log(response, " data");
+      setPosts(response.posts);
+
+    } catch (err) {
+      console.log(err.message, " this is the error in getPosts");
+    }
+  }
+
+  useEffect(() => {
+    //Getting posts, C(R)UD
+
+    getPosts();
+  }, []); // This is useEffect runs once when the Feed component
+  // loads
+
   return (
     <Routes>
-      <Route path="/" element={<FeedPage />} />
+      <Route path="/" element={<FeedPage posts={posts}/>} />
       {/* <Route path="/" element={<HomePage /> */}
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
