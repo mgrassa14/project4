@@ -40,6 +40,7 @@ function App() {
 
     console.log('being called')
     userService.logout();
+    // when we change the state, it will rerender the component(everything in react is a component)
     setUser(null);
   }
 
@@ -105,7 +106,7 @@ function App() {
   useEffect(() => {
     //Getting posts, C(R)UD
     getPosts();
-  }, []); // This is useEffect runs once when the Feed component
+  }, [user]); // Every time the userState changes/updates then the useEffect will rerun
   // loads
 
   if (user) {
@@ -123,9 +124,10 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/home" element={<HomePage />} />
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
-      <Route path="/*" element={<Navigate to="/login" />} />
+      <Route path="/*" element={<Navigate to="/home" />} />
     </Routes>
   );
 }

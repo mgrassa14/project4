@@ -14,7 +14,7 @@ export default function PostDisplay({posts, numPhotosCol, isProfile, loading, ad
           <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
         </Segment>
         <Card.Group itemsPerRow={numPhotosCol} stackable>
-          {posts.map((post) => {
+          {posts?.map((post) => {
             return (
               <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser}/>
             );
@@ -34,7 +34,7 @@ export default function PostDisplay({posts, numPhotosCol, isProfile, loading, ad
     //     );
     //   })}
       <Card.Group itemsPerRow={numPhotosCol} stackable>
-        {posts.map((post) => {
+        {posts?.map((post) => {
           return <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser}/>;
       })}
     </Card.Group>

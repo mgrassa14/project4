@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Form, Segment } from 'semantic-ui-react';
 
 import PageHeader from '../../components/Header/Header';
@@ -11,6 +13,8 @@ export default function AddPostPage({handleAddPost}){
         description: ""
       })
     const [selectFile, setSelectFile] = useState('')
+    // initializes useNavigate
+    const navigate = useNavigate();
 
     function handleChange(e){
         setState({
@@ -36,6 +40,12 @@ export default function AddPostPage({handleAddPost}){
         }
         handleAddPost(formData);
         // make api call!
+        // resets the state back to the initial state
+        // setState({
+        //     title: "",
+        //     description: ""
+        //   });
+        navigate("/");
 
     }
     return (

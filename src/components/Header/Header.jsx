@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import { Menu, Header, Segment, Image, Icon} from 'semantic-ui-react';
 
 export default function PageHeader({ loggedUser, handleLogout }){
+
+
     return (
         <>
-            {/* <Header as='h2' >
-              This is the HEADER!
-            </Header>
-            <Link id='addpost' to="/addPost">Create Post</Link > */}
             <Menu inverted size='huge'>
                 <Menu.Item as={Link} to='/'>
                     Home
@@ -28,11 +26,10 @@ export default function PageHeader({ loggedUser, handleLogout }){
                             avatar
                         ></Image>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/login' onClick={handleLogout}>
+                    <Menu.Item as={Link} onClick={handleLogout}>
                         Logout
                     </Menu.Item>    
                 </Menu.Menu>
-                
             </Menu>
         </>
     )

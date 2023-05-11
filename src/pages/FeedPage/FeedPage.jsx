@@ -19,6 +19,14 @@ export default function FeedPage({ posts, loading, error, loggedUser, handleLogo
             </>
         );
     }
+    if (loading) {
+        return (
+            <>
+            <PageHeader loggedUser={loggedUser} handleLogout={handleLogout}/>
+            <h1>Loading...</h1>
+            </>
+        );
+    }
     return (
         <Grid centered>
         <Grid.Row>

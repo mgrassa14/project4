@@ -36,6 +36,12 @@ export default function PostCard({post, isProfile, addLike, removeLike, loggedUs
         </Card.Header>
       </Card.Content> */}
       <Image src={`${post?.photoUrl}`} wrapped ui={false} />
+      <Card.Content textAlign="center">
+        <Card.Header>{post.title}</Card.Header>
+        <Card.Description textAlign="left">
+          {post.description}
+        </Card.Description>
+      </Card.Content>
       {isProfile ? (
         ""
       ) : (
