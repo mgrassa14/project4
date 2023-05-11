@@ -10,8 +10,8 @@ const postSchema = new mongoose.Schema({
     photoUrl: String,
     title: String,
     description: String,
-    likes: [likesSchema]
-  })
+    likes: [likesSchema],
+  }, {timestamps: true})
 
 
 module.exports = mongoose.model('Post', postSchema); 
