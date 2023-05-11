@@ -79,10 +79,10 @@ async function profile(req, res){
     const user = await User.findOne({username: req.params.username})
     // Then find all the posts that belong to that user
     if(!user) return res.status(404).json({error: 'User not found'})
-
+    // finding all the users by the user._id and then populating 
     const posts = await Post.find({user: user._id}).populate("user").exec();
     console.log(posts, ' this posts')
-    res.status(200).json({data: posts, user: user})
+    res.status(200).json({posts: posts, user: user})
   } catch(err){
     console.log(err)
     res.status(400).json({err})

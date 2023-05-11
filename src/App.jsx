@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import FeedPage from "./pages/FeedPage/FeedPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 import userService from "./utils/userService";
 import AddPostPage from "./pages/AddPostPage/AddPostPage";
@@ -55,7 +56,6 @@ function App() {
 
   useEffect(() => {
     //Getting posts, C(R)UD
-
     getPosts();
   }, []); // This is useEffect runs once when the Feed component
   // loads
@@ -67,6 +67,7 @@ function App() {
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/addPost" element={<AddPostPage handleAddPost={handleAddPost}/>} />
+      <Route path="/:username" element={<ProfilePage />} />
     </Routes>
   );
 }

@@ -4,7 +4,7 @@ import { Card } from "semantic-ui-react";
 
 export default function PostDisplay({posts}) {
     return (
-      <Card.Group itemsPerRow={2} stackable>
+      <Card.Group itemsPerRow={3} stackable>
         {posts.map((post) => {
           return (
             <PostCard

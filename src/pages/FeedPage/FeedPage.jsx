@@ -21,7 +21,7 @@ export default function FeedPage({ posts }){
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-            <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 800 }}>
             <PostDisplay posts={posts}/>
             </Grid.Column>
         </Grid.Row>
