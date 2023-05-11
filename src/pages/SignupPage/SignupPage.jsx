@@ -129,7 +129,7 @@ export default function Signup({handleSignUpOrLogin}){
                 {error ? <ErrorMessage error={error} /> : null}
             </Form>
             <Message>
-                Already have an account? <a href='#'>Log in!</a>
+                Already have an account? <a href='/login'>Log in!</a>
             </Message>
             </Grid.Column>
         </Grid>

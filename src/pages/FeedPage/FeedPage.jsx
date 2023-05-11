@@ -10,12 +10,12 @@ import { useState, useEffect  } from 'react';
 
 
 
-export default function FeedPage({ posts, loading, error }){  
+export default function FeedPage({ posts, loading, error, loggedUser, handleLogout, addLike, removeLike }){  
 
     if (error) {
         return (
             <>
-            <PageHeader />
+            <PageHeader loggedUser={loggedUser} handleLogout={handleLogout}/>
             </>
         );
     }
@@ -23,12 +23,20 @@ export default function FeedPage({ posts, loading, error }){
         <Grid centered>
         <Grid.Row>
             <Grid.Column>
-            <PageHeader />
+            <PageHeader loggedUser={loggedUser} handleLogout={handleLogout}/>
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
             <Grid.Column style={{ maxWidth: 800 }}>
-            <PostDisplay posts={posts} numPhotosCol={3} isProfile={false} loading={loading}/>
+            <PostDisplay 
+            posts={posts} 
+            numPhotosCol={3} 
+            isProfile={false} 
+            loading={loading}
+            addLike={addLike}
+			removeLike={removeLike}
+			loggedUser={loggedUser}
+            />
             </Grid.Column>
         </Grid.Row>
         </Grid>
