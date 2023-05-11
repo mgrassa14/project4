@@ -21,7 +21,10 @@ function App() {
 
   // when the app loads up grab the token from storage if there is one
   const [user, setUser] = useState(userService.getUser())
+
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   // call this function after we make a http request to signup or login a user, to update the token! and our state
   // userService.signup(formData)
   // userService.login(state)
@@ -33,12 +36,15 @@ function App() {
   // (C)RUD
   async function handleAddPost(post) {
     try {
+      setLoading(true);
       const responseData = await postsApi.create(post); // this is calling our create function in the postsApi utils folder
       console.log(responseData, " response from the server");
       setPosts([responseData.data, ...posts]); // spread operator to keep all the posts that are already in state!
+      setLoading(false);
     } catch (err) {
+      setLoading(false);
       console.log(err, " error in addPost");
-      // setError("Error creating a post, please try again");
+      setError("Error creating a post, please try again");
     }
   }
 
@@ -48,9 +54,10 @@ function App() {
       const response = await postsApi.getAll();
       console.log(response, " data");
       setPosts(response.posts);
-
+      setLoading(false);
     } catch (err) {
       console.log(err.message, " this is the error in getPosts");
+      setLoading(false);
     }
   }
 
@@ -62,7 +69,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<FeedPage posts={posts}/>} />
+      <Route path="/" element={<FeedPage posts={posts} loading={loading} error={error}/>} />
       {/* <Route path="/" element={<HomePage /> */}
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
