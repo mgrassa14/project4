@@ -66,9 +66,10 @@ export default function PostCard({post, isProfile, addLike, removeLike, loggedUs
         <Icon name={"heart"} size="large" color={likeColor} onClick={clickHandler} />
         {post.likes.length} Likes
       </Card.Content>
-      
+
+      {loggedUser.username === post.user.username && isProfile ? 
       <Card.Content extra textAlign={"right"}>
         <Icon name={"delete"} size="large" onClick={() => {deletePost(post._id)}} />
-      </Card.Content>
+      </Card.Content> : null}
     </Card>
 )}
