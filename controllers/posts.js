@@ -2,6 +2,7 @@ const Post = require('../models/post');
 
 module.exports = {
     create,
+    deletePost,
     index
 }
 
@@ -46,6 +47,18 @@ function create(req, res){
           }
     }) // end of s3.upload
 }
+
+async function deletePost(req, res){
+    try {
+        // this populates the user when you find the posts
+        // so you'll have access to the users information 
+        // when you fetch teh posts
+        await Post.findByIdAndDelete(req.params.id)
+        res.status(200).json({data: 'Post Deleted'})
+    } catch(err){
+        console.log(err, 'something is wrong with deletPost')
+    }
+} 
 
 async function index(req, res){
     try {

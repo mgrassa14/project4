@@ -14,8 +14,9 @@ import Loader from "../../components/Loader/Loader";
 // information
 import userService from "../../utils/userService";
 import * as likesApi from '../../utils/likesApi'
+import * as postsApi from "../../utils/postApi"
 
-export default function ProfilePage({loggedUser}) {
+export default function ProfilePage({loggedUser, getPosts}) {
     const [posts, setPosts] = useState([]);
     const [profileUser, setProfileUser] = useState({});
     const [loading, setLoading] = useState(true); // the page is loading when the component loads
@@ -79,6 +80,16 @@ export default function ProfilePage({loggedUser}) {
         }
     }
 
+    async function deletePost(postId){
+        try {
+            const postDelete = await postsApi.deletePost(postId)
+            getProfile()
+            getPosts()
+        } catch (err) {
+            console.log(err, ' err in deletePost in profilePage')
+        }
+    }
+
     // if anything went wrong with userService.getProfile(username)
     // show this UI
     if (error) {
@@ -115,7 +126,7 @@ export default function ProfilePage({loggedUser}) {
         </Grid.Row>
         <Grid.Row centered>
             <Grid.Column style={{ maxWidth: 750 }}>
-            <PostDisplay posts={posts} numPhotosCol={3} isProfile={true} loggedUser={loggedUser} addLike={addLike} removeLike={removeLike}/>
+            <PostDisplay posts={posts} numPhotosCol={3} isProfile={true} loggedUser={loggedUser} addLike={addLike} removeLike={removeLike} deletePost={deletePost}/>
             </Grid.Column>
         </Grid.Row>
         </Grid>

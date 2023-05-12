@@ -116,7 +116,7 @@ function App() {
         <Route path="/" element={<FeedPage handleLogout={handleLogout} posts={posts} loading={loading} error={error} loggedUser={user} addLike={addLike} removeLike={removeLike}/>} />
         <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
         <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
-        <Route path="/:username" element={<ProfilePage loggedUser={user} handleLogout={handleLogout}/>} />
+        <Route path="/:username" element={<ProfilePage loggedUser={user} handleLogout={handleLogout} getPosts={getPosts}/>} />
         <Route path="/addPost" element={<AddPostPage handleAddPost={handleAddPost} handleLogout={handleLogout}/>} />
       </Routes>
     )

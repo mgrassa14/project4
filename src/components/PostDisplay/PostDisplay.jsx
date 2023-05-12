@@ -3,7 +3,7 @@ import PostCard from "../PostCard/PostCard";
 import { Card, Dimmer, Segment, Image } from "semantic-ui-react";
 import Loader from "../Loader/Loader";
 
-export default function PostDisplay({posts, numPhotosCol, isProfile, loading, addLike, removeLike, loggedUser}) {
+export default function PostDisplay({posts, numPhotosCol, isProfile, loading, addLike, removeLike, loggedUser, deletePost}) {
   if (loading) {
     return (
       <>
@@ -16,7 +16,7 @@ export default function PostDisplay({posts, numPhotosCol, isProfile, loading, ad
         <Card.Group itemsPerRow={numPhotosCol} stackable>
           {posts?.map((post) => {
             return (
-              <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser}/>
+              <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser} deletePost={deletePost}/>
             );
           })}
         </Card.Group>
@@ -24,18 +24,9 @@ export default function PostDisplay({posts, numPhotosCol, isProfile, loading, ad
     );
   }
   return (
-    // <Card.Group itemsPerRow={3} stackable>
-    //   {posts.map((post) => {
-    //     return (
-    //       <PostCard
-    //         post={post}
-    //         key={post._id}
-    //       />
-    //     );
-    //   })}
       <Card.Group itemsPerRow={numPhotosCol} stackable>
         {posts?.map((post) => {
-          return <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser}/>;
+          return <PostCard post={post} key={post._id} isProfile={isProfile} addLike={addLike} removeLike={removeLike} loggedUser={loggedUser} deletePost={deletePost}/>;
       })}
     </Card.Group>
   );

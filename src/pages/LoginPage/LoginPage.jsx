@@ -46,7 +46,8 @@ export default function LoginPage(props){
   }
 
   return (
-    <Grid
+    <div style={{width: '100vw',height: '100vh', backgroundColor: 'blue'}}>
+    <Grid id="loginPage"
       textAlign="center"
       style={{ height: "100vh", width: "100vw" }}
       verticalAlign="middle"
@@ -90,6 +91,7 @@ export default function LoginPage(props){
         {error ? <ErrorMessage error={error} /> : null}
       </Grid.Column>
     </Grid>
+    </div>
   );
 } 
 
