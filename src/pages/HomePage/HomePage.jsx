@@ -24,6 +24,7 @@ export default function HomePage(){
                 </Menu.Menu>
             </Menu>
 		<div>this is the home page!</div>
+        <div>testing the git repo!</div>
         </>
 	)
 } 
