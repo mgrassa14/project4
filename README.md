@@ -1,32 +1,62 @@
 
-# Mern Boilerplate
+# TechGram
 
-This is a mern Boilerplate using vite to compile the frontend.  
+When building my PC, I was searching the internet for inspiration on how I would want my PC look. I would
 
-##### Things to note
+scour the internet from pinterest, instagram, youtube, and more. Yes, I did find the insperation I needed but did not 
 
-1. The server code is using `import`, currently you have to add the file extension in the server code. 
+like how I had found various forms of inspiration from all sorts of different media platforms. 
 
-2.  Note the `index.html` for the code needed to be added for hot reloading and etc... 
+<br>
 
-3. Code is setup to use `JWT` auth
+So I created TechGram!
 
-4. Take a look at the server.js code, there is some es6 things to setup `__dirname`
+</br>
 
+# Screenshots
 
-#### Setup 
+* TechGram is a social media platform that users can signup and login too. 
 
-1. ```npm install```
-2. ```npm run dev```
-3. setup `.env` file 
+<img src="https://i.imgur.com/PBMzz5K.png">
 
-- .env file 
+* Users have the ability to create inpiring posts of anything related to tech. 
+    * That includes PCs, Gaming Console setups, laptops, ect. 
 
-```
-SECRET=seiRocks!
-```
+<img src="https://i.imgur.com/PBMzz5K.png">
 
-##### Starting the App
+* Users can add a like to other user's posts. 
 
-- One terminal
-command - ```npm run dev```
+<img src="https://i.imgur.com/PBMzz5K.png">
+
+* Logged in users can view their profile.
+    * The user's profile includes all the posts that the logged in user has created as well as delete any posts they want.
+
+<img src="https://i.imgur.com/PBMzz5K.png">
+
+<br>
+
+# Technologies Used:
+
+MongoDB &nbsp; Express &nbsp; React &nbsp; Node.js &nbsp; Semantic UI Reac &nbsp; HTML &nbsp; CSS &nbsp; JavaScript
+
+</br>
+
+# Getting Started!
+
+The below link will take you to TechGram's deployed app:
+
+[TechGram](https://techgram.onrender.com) or https://techgram.onrender.com
+
+<br>
+
+# Next Steps
+
+1. Incorporate a comments section for users to add to a post
+
+2. Add a favorites section for the logged user to save their favorite posts
+
+3. Incorporated an animated background
+
+4. Inegrate a chat funciton for users to message eachother
+
+5. Inclued a Follow feature for logged user (add and save other users profile link)
