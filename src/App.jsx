@@ -117,7 +117,7 @@ function App() {
         <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
         <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
         <Route path="/:username" element={<ProfilePage loggedUser={user} handleLogout={handleLogout} getPosts={getPosts}/>} />
-        <Route path="/addPost" element={<AddPostPage handleAddPost={handleAddPost} handleLogout={handleLogout}/>} />
+        <Route path="/addPost" element={<AddPostPage handleAddPost={handleAddPost} handleLogout={handleLogout} loggedUser={user}/>} />
       </Routes>
     )
   }

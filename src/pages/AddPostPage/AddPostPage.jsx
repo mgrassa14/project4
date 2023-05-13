@@ -6,7 +6,7 @@ import { Button, Form, Segment } from 'semantic-ui-react';
 
 import PageHeader from '../../components/Header/Header';
 
-export default function AddPostPage({handleAddPost}){
+export default function AddPostPage({handleAddPost, handleLogout, loggedUser}){
 
     const [state, setState] = useState({
         title: "",
@@ -50,7 +50,7 @@ export default function AddPostPage({handleAddPost}){
     }
     return (
         <>
-        <PageHeader />
+        <PageHeader handleLogout={handleLogout} loggedUser={loggedUser}/>
         <Segment>
             <Form onSubmit={handleSubmit}>
                 <Form.Input
