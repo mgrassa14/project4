@@ -28,6 +28,7 @@ export default function HomePage(){
             <br/>
             <div>this is the home page!</div>
             <div>testing the git repo!</div>
+            <div>testing after deployment</div>
         </div>
         </>
 	)
