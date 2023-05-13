@@ -9,7 +9,8 @@ export default function PageHeader({ loggedUser, handleLogout }){
         <>
             <Menu inverted size='huge'>
                 <Menu.Item as={Link} to='/'>
-                    Home
+                    <Icon name='camera' />
+                    TechGram
                 </Menu.Item>
                 <Menu.Item as={Link} to='/addPost'>
                     Create Post

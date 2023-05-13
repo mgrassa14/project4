@@ -7,16 +7,13 @@ export default function HomePage(){
 	return (
         <>
         <Menu fixed='top' inverted size='huge'>
-            <Menu.Item >
-                <Link to='/'>
-                    Home
-                </Link>
+            <Menu.Item as={Link} to='/'>
+                <Icon name='camera' />
+                    TechGram
             </Menu.Item>
             <Menu.Menu position='right'>
-                <Menu.Item>
-                <Link to='/login'>
+                <Menu.Item as={Link} to='/login'>
                     Log in
-                </Link>
                 </Menu.Item>    
                 <Menu.Item as={Link} to='/signup'>
                     Signup

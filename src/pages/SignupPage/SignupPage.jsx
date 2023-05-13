@@ -1,4 +1,5 @@
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import { useState } from 'react'
 import userService from '../../utils/userService';
@@ -71,8 +72,8 @@ export default function Signup({handleSignUpOrLogin}){
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' floated='right'>
             <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as="h2" color="`    `" textAlign="center">
-                <Image src='https://i.imgur.com/TM4eA5g.jpglogo.png' /> Sign Up!
+            <Header as="h2" color="" textAlign="center">
+                <Image as={Link} to='/' src='https://i.imgur.com/zGJ6Rwo.jpg' /> Sign Up!
             </Header>
             <Form autoComplete="off" onSubmit={handleSubmit}>
                 <Segment stacked>

@@ -60,3 +60,5 @@ The below link will take you to TechGram's deployed app:
 4. Inegrate a chat funciton for users to message eachother
 
 5. Inclued a Follow feature for logged user (add and save other users profile link)
+
+6. Allow users to update their profile picture
