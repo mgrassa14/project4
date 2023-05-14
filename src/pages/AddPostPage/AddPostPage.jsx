@@ -72,11 +72,12 @@ export default function AddPostPage({handleAddPost, handleLogout, loggedUser}){
                     label='Image'
                     type='file'
                     name='image'
+                    required
                     placeholder='Upload Image'
                     onChange={handleFileInput}
                 />
                 <Button type="submit" className="btn">
-                    App Post
+                    Add Post
                 </Button>
             </Form>
         </Segment>
