@@ -1,6 +1,5 @@
 import { Image, Grid, Segment } from "semantic-ui-react";
 
-import './ProfileBio.css'
 // ^ If you want your custom css 
 // convention of the class name is component-name + element or class idea you want
 // .profile-bio-span

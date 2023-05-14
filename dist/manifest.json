@@ -64,11 +64,11 @@
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.svg"
   },
   "src/main.jsx": {
-    "file": "assets/main.e4cc7127.js",
+    "file": "assets/main.075ec205.js",
     "src": "src/main.jsx",
     "isEntry": true,
     "css": [
-      "assets/main.78438822.css"
+      "assets/main.8127b91c.css"
     ],
     "assets": [
       "assets/flags.94d5c7f1.png",
@@ -90,7 +90,7 @@
     ]
   },
   "src/main.css": {
-    "file": "assets/main.78438822.css",
+    "file": "assets/main.8127b91c.css",
     "src": "src/main.css"
   }
 }
