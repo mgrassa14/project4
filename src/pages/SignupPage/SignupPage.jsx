@@ -72,8 +72,8 @@ export default function Signup({handleSignUpOrLogin}){
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' floated='right'>
             <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as="h2" color="" textAlign="center">
-                <Image as={Link} to='/' src='https://i.imgur.com/zGJ6Rwo.jpg' /> Sign Up!
+            <Header as="h2" textAlign="center">
+                <Image as={Link} to='/' src='https://i.imgur.com/zGJ6Rwo.jpg' /> TechGram
             </Header>
             <Form autoComplete="off" onSubmit={handleSubmit}>
                 <Segment stacked>
@@ -123,7 +123,7 @@ export default function Signup({handleSignUpOrLogin}){
                         onChange={handleFileInput}
                     />
                     </Form.Field>
-                    <Button type="submit" className="btn">
+                    <Button type="submit" className="btn" color="blue">
                     Signup
                     </Button>
                 </Segment>
