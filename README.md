@@ -62,3 +62,5 @@ The below link will take you to TechGram's deployed app:
 5. Inclued a Follow feature for logged user (add and save other users profile link)
 
 6. Allow users to update their profile picture
+
+7. Add a search feature that users can look up a specific post, users, and/or posts with the same tag.
