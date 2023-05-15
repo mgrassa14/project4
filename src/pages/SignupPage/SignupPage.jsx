@@ -73,7 +73,7 @@ export default function Signup({handleSignUpOrLogin}){
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' floated='right'>
             <Grid.Column style={{ maxWidth: 450 }}>
             <Header as="h2" textAlign="center">
-                <Image as={Link} to='/' src='https://i.imgur.com/zGJ6Rwo.jpg' /> TechGram
+                <Image as={Link} to='/' src="https://i.imgur.com/0lljNYN.png" width="45" height="45" margin="0"/> TechGram
             </Header>
             <Form autoComplete="off" onSubmit={handleSubmit}>
                 <Segment stacked>

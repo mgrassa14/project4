@@ -17,3 +17,7 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+  .ui.header>.image:not(.icon):only-child,.ui.header>img:only-child {
+    margin-right:0rem;
+}
