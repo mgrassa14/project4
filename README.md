@@ -15,6 +15,8 @@ So I created TechGram!
 
 # Screenshots
 
+<img src="https://i.imgur.com/PBMzz5K.png">
+
 * TechGram is a social media platform that users can signup and login too. 
 
 <img src="https://i.imgur.com/PBMzz5K.png">
