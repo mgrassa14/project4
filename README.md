@@ -15,25 +15,27 @@ So I created TechGram!
 
 # Screenshots
 
-<img src="https://i.imgur.com/PBMzz5K.png">
+<img src="https://i.imgur.com/JGU9Zz5.png">
 
 * TechGram is a social media platform that users can signup and login too. 
 
-<img src="https://i.imgur.com/PBMzz5K.png">
+<img src="https://i.imgur.com/bZ7S9hS.png">
+
+<img src="https://i.imgur.com/0T416Za.png">
 
 * Users have the ability to create inpiring posts of anything related to tech. 
     * That includes PCs, Gaming Console setups, laptops, ect. 
 
-<img src="https://i.imgur.com/PBMzz5K.png">
+<img src="https://i.imgur.com/xB6w9QY.png">
 
 * Users can add a like to other user's posts. 
 
-<img src="https://i.imgur.com/PBMzz5K.png">
+<img src="https://i.imgur.com/jVjhJTq.png">
 
 * Logged in users can view their profile.
     * The user's profile includes all the posts that the logged in user has created as well as delete any posts they want.
 
-<img src="https://i.imgur.com/PBMzz5K.png">
+<img src="https://i.imgur.com/LTkuIdv.png">
 
 <br>
 
