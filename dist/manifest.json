@@ -31,40 +31,40 @@
     "file": "assets/outline-icons.4bc359c2.woff",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/outline-icons.woff"
   },
-  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.woff": {
-    "file": "assets/brand-icons.9fafd6c3.woff",
-    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.woff"
-  },
   "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.woff": {
     "file": "assets/icons.95b6a484.woff",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.woff"
+  },
+  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.woff": {
+    "file": "assets/brand-icons.9fafd6c3.woff",
+    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.woff"
   },
   "node_modules/semantic-ui-css/themes/default/assets/fonts/outline-icons.ttf": {
     "file": "assets/outline-icons.67172172.ttf",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/outline-icons.ttf"
   },
-  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.ttf": {
-    "file": "assets/brand-icons.42e369dc.ttf",
-    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.ttf"
-  },
   "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.ttf": {
     "file": "assets/icons.cb7f81f5.ttf",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.ttf"
+  },
+  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.ttf": {
+    "file": "assets/brand-icons.42e369dc.ttf",
+    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.ttf"
   },
   "node_modules/semantic-ui-css/themes/default/assets/fonts/outline-icons.svg": {
     "file": "assets/outline-icons.ae8fd02a.svg",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/outline-icons.svg"
   },
-  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.svg": {
-    "file": "assets/brand-icons.6519a15b.svg",
-    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.svg"
-  },
   "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.svg": {
     "file": "assets/icons.282a64fb.svg",
     "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/icons.svg"
   },
+  "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.svg": {
+    "file": "assets/brand-icons.6519a15b.svg",
+    "src": "node_modules/semantic-ui-css/themes/default/assets/fonts/brand-icons.svg"
+  },
   "src/main.jsx": {
-    "file": "assets/main.7b713a07.js",
+    "file": "assets/main.76f1f2ee.js",
     "src": "src/main.jsx",
     "isEntry": true,
     "css": [

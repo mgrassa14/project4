@@ -46,11 +46,12 @@ export default function LoginPage(props){
   }
 
   return (
-    <div style={{width: '100vw',height: '100vh'}}>
+    // <div style={{width: '100vw',height: '100vh'}}>
     <Grid id="loginPage"
       textAlign="center"
-      style={{ height: "100vh", width: "100vw", margin: 0}}
+      style={{ height: "100vh", margin: 0}}
       verticalAlign="middle"
+      centered
     >
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as="h2" textAlign="center">
@@ -91,7 +92,7 @@ export default function LoginPage(props){
         {error ? <ErrorMessage error={error} /> : null}
       </Grid.Column>
     </Grid>
-    </div>
+    // </div>
   );
 } 
 
